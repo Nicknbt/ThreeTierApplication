@@ -1,0 +1,39 @@
+<web-app>
+  <!-- General description of your Web application -->
+  <display-name>
+      Project 4 CNT 4714
+  </display-name>
+  <description>
+    Three-Tiered Web-Based App
+  </description>
+  <!-- Servlet definitions -->
+  <servlet>
+    <servlet-name>mySQLServlet</servlet-name>
+    <description>
+         Servlet the handles SQL commands
+    </description>
+    <servlet-class>mySQLServlet</servlet-class>
+    <init-param>
+     <param-name>databaseDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>databaseName</param-name>
+     <param-value>jdbc:mysql://localhost:3312/project4</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>client</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>client</param-value>
+    </init-param>
+  </servlet>
+  <!-- Servlet mappings -->
+  <servlet-mapping>
+    <servlet-name>mySQLServlet</servlet-name>
+    <url-pattern>/mySQLServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
+
